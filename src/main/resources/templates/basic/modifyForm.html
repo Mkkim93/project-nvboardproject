@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 수정</title>
+</head>
+<body>
+<h1>게시판 수정</h1>
+<form action="/basic/boardList" method="post">
+    <input type="hidden" name="id" value="${board.id}">
+    <input type="text" name="title" placeholder="제목">
+    <textarea name="content" placeholder="내용"></textarea>
+    <button type="submit">수정</button>
+</form>
+</body>
+</html>

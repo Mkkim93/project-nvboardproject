@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 작성</title>
+</head>
+<style>
+    .layout {
+        width : 500px;
+        margin : 0 auto;
+        margin-top : 40px;
+    }
+
+    .layout input {
+        width : 100%;
+        box-sizing : border-box
+    }
+
+    .layout textarea {
+        width : 100%;
+        min-height : 300px;
+        margin-top : 10px;
+    }
+</style>
+
+<body>
+<h1>게시판 작성</h1>
+<div class="layout">
+<form action="writepro" method="post">
+    <div>
+    <label>글 제목</label>
+    <input type="text" name="title" th:value="${board.title}" placeholder="제목">
+    </div>
+
+    <div>
+    <label>작성자</label>
+    <input type="text" name="username" th:value="${board.username}" placeholder="작성자">
+    </div>
+
+    <div>
+    <label>내용</label>
+    <textarea name="content" th:value="${board.content}" placeholder="내용"></textarea>
+    </div>
+    <button type="submit">작성</button>
+</form>
+</div>
+</body>
+</html>
